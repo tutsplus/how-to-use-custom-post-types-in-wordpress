@@ -3,7 +3,7 @@
 	Plugin Name: Tutsplus plugin to register post type
 	Plugin URI: https://code.tutsplus.com
 	Description: Registers the 'project' post type
-	Version: 1.0
+	Version: 2.2
 	Author: Rachel McCollin
 	Author URI: https://rachelmccollin.com
 	*/
@@ -40,7 +40,8 @@ function tutsplus_register_post_type() {
 			'thumbnail',
 			'page-attributes'
 		),
-		'taxonomies' => array( 'post_tag', 'category' )
+		'taxonomies' => array( 'post_tag', 'category' ),
+		'show_in_rest' => true
 	);
 	
 	register_post_type( 'tutsplus_project', $args );
